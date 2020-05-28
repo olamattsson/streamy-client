@@ -1,9 +1,10 @@
 import * as React from 'react';
 
-export const StreamShow = (props) => {
+const StreamShow = (props) => {
     return (
         <div>
             StreamShow
         </div>
     );
 };
+export default StreamShow;

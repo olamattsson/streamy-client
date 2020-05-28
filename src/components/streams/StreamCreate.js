@@ -1,9 +1,10 @@
 import * as React from 'react';
 
-export const StreamCreate = (props) => {
+const StreamCreate = (props) => {
     return (
         <div>
             StreamCreate
         </div>
     );
 };
+export default StreamCreate;
