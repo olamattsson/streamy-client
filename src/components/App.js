@@ -1,18 +1,28 @@
 import React from 'react';
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Link, Route} from "react-router-dom";
 
 const PageOne = () => {
-    return <div>PageOne</div>
+    return (
+        <div>
+            PageOne<br/>
+            <Link to={"/pagetwo"}>Go to PageTwo</Link>
+        </div>
+    );
 }
 const PageTwo = () => {
-    return <div>PageTwo</div>
+    return (
+        <div>
+            PageTwo<br/>
+            <Link to={"/"}>Go to PageOne</Link>
+        </div>
+    );
 }
 const App = () => {
     return (
         <div>
             <BrowserRouter>
-                <Route path={"/"} exact component={PageOne} />
-                <Route path={"/pagetwo"} component={PageTwo} />
+                <Route path={"/"} exact component={PageOne}/>
+                <Route path={"/pagetwo"} component={PageTwo}/>
             </BrowserRouter>
         </div>
     );
