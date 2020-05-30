@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 class GoogleAuth extends React.Component {
-    state = {isIgnedIn: null}
+    state = {isSignedIn: null}
 
     componentDidMount() {
         window.gapi.load('client:auth2', () => {
@@ -16,9 +16,9 @@ class GoogleAuth extends React.Component {
     }
 
     renderAuthButton() {
-        if (this.state.isIgnedIn === null) {
+        if (this.state.isSignedIn === null) {
             return <div>I don't know if we are signed in</div>
-        } else if (this.state.isIgnedIn) {
+        } else if (this.state.isSignedIn) {
             return <div>We are signed in</div>
         }
         return <div>We are not signed in</div>
