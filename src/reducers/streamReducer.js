@@ -18,6 +18,7 @@ export default (state = {}, action) => {
         case FETCH_STREAM:
             return { ...state, [action.payload.id]: action.payload};
         case FETCH_STREAMS:
+            return {...state, ..._.mapKeys(action.payload, 'id')};
         default:
             return state;
     }
