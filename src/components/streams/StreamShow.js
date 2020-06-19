@@ -3,6 +3,12 @@ import {connect} from "react-redux";
 import flv from 'flv.js';
 import {fetchStream} from "../../actions";
 
+/**
+ * See example of setting up a video stream to this component
+ * in the next to last video of section 22 of the Udemy course
+ * "Modern React with Redux [2020 Update]"
+ * (Video nr 295 at the time of writing)
+ */
 class StreamShow extends React.Component{
     constructor(props) {
         super(props);
